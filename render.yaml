@@ -12,3 +12,7 @@ services:
         value: "3.10"
       - key: HOST
         value: "0.0.0.0"
+      - key: MCP_LOGGING_STDOUT
+        value: "true"
+      - key: MCP_VERBOSE  
+        value: "true"
