@@ -4,9 +4,11 @@ services:
     runtime: python
     plan: free
     buildCommand: pip install uv && uv sync --frozen --no-dev --no-editable
-    startCommand: uv run mcp-atlassian --port $PORT --host 0.0.0.0 --oauth-enable
+    startCommand: python web_server.py
     envVars:
       - key: PORT
         value: 10000
       - key: PYTHON_VERSION
         value: "3.10"
+      - key: HOST
+        value: "0.0.0.0"
